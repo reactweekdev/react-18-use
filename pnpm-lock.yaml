@@ -10,6 +10,7 @@ specifiers:
   cheerio: 1.0.0-rc.12
   react: experimental
   react-dom: experimental
+  react-router-dom: ^6.9.0
   rect-use: ^1.0.0
   typescript: ^4.9.3
   vite: ^3.2.5
@@ -20,6 +21,7 @@ dependencies:
   cheerio: 1.0.0-rc.12
   react: 0.0.0-experimental-9c54b29b4-20230322
   react-dom: 0.0.0-experimental-9c54b29b4-20230322_ed6xpwya6oca3tppk6uilvo2my
+  react-router-dom: 6.9.0_tah32hmxhmi2g7goovfvj5m5ou
   rect-use: 1.0.0_tah32hmxhmi2g7goovfvj5m5ou
 
 devDependencies:
@@ -462,6 +464,11 @@ packages:
       hey-listen: 1.0.8
       style-value-types: 3.2.0
       tslib: 1.14.1
+    dev: false
+
+  /@remix-run/router/1.4.0:
+    resolution: {integrity: sha512-BJ9SxXux8zAg991UmT8slpwpsd31K1dHHbD3Ba4VzD+liLQ4WAMSxQp2d2ZPRPfN0jN2NPRowcSSoM7lCaF08Q==}
+    engines: {node: '>=14'}
     dev: false
 
   /@tanstack/query-core/4.27.0:
@@ -1295,6 +1302,29 @@ packages:
     resolution: {integrity: sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /react-router-dom/6.9.0_tah32hmxhmi2g7goovfvj5m5ou:
+    resolution: {integrity: sha512-/seUAPY01VAuwkGyVBPCn1OXfVbaWGGu4QN9uj0kCPcTyNYgL1ldZpxZUpRU7BLheKQI4Twtl/OW2nHRF1u26Q==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.4.0
+      react: 0.0.0-experimental-9c54b29b4-20230322
+      react-dom: 0.0.0-experimental-9c54b29b4-20230322_ed6xpwya6oca3tppk6uilvo2my
+      react-router: 6.9.0_ed6xpwya6oca3tppk6uilvo2my
+    dev: false
+
+  /react-router/6.9.0_ed6xpwya6oca3tppk6uilvo2my:
+    resolution: {integrity: sha512-51lKevGNUHrt6kLuX3e/ihrXoXCa9ixY/nVWRLlob4r/l0f45x3SzBvYJe3ctleLUQQ5fVa4RGgJOTH7D9Umhw==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.4.0
+      react: 0.0.0-experimental-9c54b29b4-20230322
+    dev: false
 
   /react/0.0.0-experimental-9c54b29b4-20230322:
     resolution: {integrity: sha512-aFi5dUOoDIxM1zVPbrwcltNii/ZEBJGj1ODqmq+RIPScX/Q7fpHnBHHoomJIfBxx9bhK13ygr1bDWmj0Q13V0Q==}

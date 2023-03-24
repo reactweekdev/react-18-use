@@ -15,6 +15,7 @@
         "cheerio": "1.0.0-rc.12",
         "react": "experimental",
         "react-dom": "experimental",
+        "react-router-dom": "^6.9.0",
         "rect-use": "^1.0.0"
     },
     "devDependencies": {

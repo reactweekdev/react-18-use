@@ -1,8 +1,8 @@
-import { Suspense } from 'react'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './router/Router'
 
 import reactLogo from '../assets/react.svg'
 
-import UsersPage from './users/UsersPage'
 import './App.css'
 
 function App() {
@@ -12,9 +12,7 @@ function App() {
             <div>
                 <img src={reactLogo} className="logo react" alt="React logo" />
             </div>
-            <Suspense fallback={<h2>Loading…</h2>}>
-                <UsersPage />
-            </Suspense>
+            <RouterProvider router={router} />
             <p className="read-the-docs">
                 React 18 use() hook showcase
             </p>
