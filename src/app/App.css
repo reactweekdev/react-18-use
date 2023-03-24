@@ -39,3 +39,28 @@
 .read-the-docs {
   color: #888;
 }
+
+/* navigation */
+.nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #213547;
+}
+
+.nav a {
+  display: inline-block;
+}
+
+.nav a:first-of-type {
+  margin-right: 15px;
+}
+
+.nav a.active {
+  color: #ffffff;
+  font-weight: bold;
+}

@@ -1,4 +1,4 @@
-import Speaker from '@/lib/models/Speaker'
+import { Speaker } from "@/lib/services/speakerService"
 
 type Props = {
     speakers: Speaker[] | any[]

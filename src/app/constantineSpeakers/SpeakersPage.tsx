@@ -1,12 +1,13 @@
 import { use } from 'react'
 
-import { userService } from '@/lib/services/userService'
-import Title from '@/components/Title'
+import { speakerService } from '@/lib/services/speakerService'
 
+import Title from '@/components/Title'
 import UsersList from './SpeakersList'
 
+
 function SpeakersPage() {
-    const speakers = use(userService.fetchUsers())
+    const speakers = use(speakerService.fetchSpeakers())
 
     return (
         <>
