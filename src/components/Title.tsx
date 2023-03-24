@@ -3,7 +3,7 @@ type Props = {
 }
 
 const Title = (props: Props) => {
-    return <div>{props.children}</div>
+    return <h2>{props.children}</h2>
 }
 
 export default Title

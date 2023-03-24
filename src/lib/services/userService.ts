@@ -1,5 +1,5 @@
-import { API } from 'lib/API'
-import User from 'lib/models/User'
+import { API } from '@/lib/API'
+import User from '@/lib/models/User'
 
 class UserService {
     private readonly endpoint = {

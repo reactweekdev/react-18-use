@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig } from 'axios'
 
-import { BASE_URL } from 'config/constants'
+import { BASE_URL } from '@/config/constants'
 
 export const publicAPI = axios.create({
     baseURL: BASE_URL || undefined,
@@ -14,7 +14,7 @@ class ApiService {
     })
 
     constructor() {
-        this.http.interceptors.request.use((config: AxiosRequestConfig) => {
+        this.http.interceptors.request.use((config) => {
             console.log('config', config)
             return config
         })

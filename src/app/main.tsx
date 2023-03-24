@@ -6,16 +6,6 @@ import '@/styles/index.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
-        <SuspenseList>
-            <Suspense fallback={<h2>Loading…</h2>}>
-                <App />
-            </Suspense>
-            <Suspense fallback={<h2>Loading…</h2>}>
-                <App />
-            </Suspense>
-            <Suspense fallback={<h2>Loading…</h2>}>
-                <App />
-            </Suspense>
-        </SuspenseList>
+        <App />
     </React.StrictMode>
 )
