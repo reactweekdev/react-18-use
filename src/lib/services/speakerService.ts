@@ -4,52 +4,52 @@ import { load } from 'cheerio'
 import { CODESTANTINE_URL } from '@/config/constants'
 
 export type Speaker = {
-  id: string
-  name: string
-  lecture: string
+    id: string
+    name: string
+    lecture: string
 }
 
 class SpeakerService {
-  async fetchSpeakers(): Promise<{}[]> {
-    try {
-      // Go to the dev.to tags page
-      const response = await axios.get(CODESTANTINE_URL)
+    async fetchSpeakers(): Promise<{}[]> {
+        try {
+            // Go to the dev.to tags page
+            const response = await axios.get(CODESTANTINE_URL)
 
-      // Get the HTML code of the webpage
-      const html = await response.data
-      const $ = load(html)
+            // Get the HTML code of the webpage
+            const html = await response.data
+            const $ = load(html)
 
-      // const speakers: Speaker[] = []
+            // const speakers: Speaker[] = []
 
-      // Find all elements with crayons-tag class, find their innerText and add them to the tags array
-      const speakersTopicsArr = $('h3.elementor-heading-title')
-        .map(function() {
-          return $(this).text()
-        })
-        .get()
+            // Find all elements with crayons-tag class, find their innerText and add them to the tags array
+            const speakersTopicsArr = $('h3.elementor-heading-title')
+                .map(function () {
+                    return $(this).text()
+                })
+                .get()
 
-      const speakers: any[] = []
-      for (let index = 0; index < speakersTopicsArr.length; index++) {
-        const elem = speakersTopicsArr[index]
+            const speakers: any[] = []
+            for (let index = 0; index < speakersTopicsArr.length; index++) {
+                const elem = speakersTopicsArr[index]
 
-        let speaker: any = {}
-        const isName = index % 2 === 0
+                let speaker: any = {}
+                const isName = index % 2 === 0
 
-        if (isName || index === 0) {
-          speaker.id = index
-          speaker.name = elem
-          speakers[index] = speaker
-        } else {
-          speaker = speakers[index - 1]
-          speaker.lecture = elem
+                if (isName || index === 0) {
+                    speaker.id = index
+                    speaker.name = elem
+                    speakers[index] = speaker
+                } else {
+                    speaker = speakers[index - 1]
+                    speaker.lecture = elem
+                }
+            }
+
+            return speakers.filter((spk) => !!spk)
+        } catch (error) {
+            throw error
         }
-      }
-
-      return speakers.filter(spk => !!spk);
-    } catch (error) {
-      throw error
     }
-  }
 }
 
 export const speakerService = new SpeakerService()
