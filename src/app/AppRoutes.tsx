@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react'
 import { Blocks } from 'react-loader-spinner'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import NavBar from './NavBar'
 import Root from './routes'
 import { SpeakersPage } from './SpeakersPage'
 import UsersPage from './users/UsersPage'
@@ -8,7 +9,7 @@ import UsersPage from './users/UsersPage'
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Root />,
+        element: <NavBar />,
         children: [
             {
                 path: '/',
