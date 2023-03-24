@@ -1,37 +1,9 @@
-import { Suspense } from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './router/Router'
 
 import reactLogo from '../assets/react.svg'
 
-import Nav from '@/components/Nav'
-import UsersPage from './users/UsersPage'
-import SpeakersPage from './constantineSpeakers/SpeakersPage'
 import './App.css'
-
-const router = createBrowserRouter([
-    {
-        path: '/',
-        element: (
-            <>
-                <Nav />
-                <Suspense fallback={<h2>Loading…</h2>}>
-                    <UsersPage />
-                </Suspense>
-            </>
-        ),
-    },
-    {
-        path: '/constantine/speakers',
-        element: (
-            <>
-                <Nav />
-                <Suspense fallback={<h2>Loading…</h2>}>
-                    <SpeakersPage />
-                </Suspense>
-            </>
-    ),
-  },
-])
 
 function App() {
 
