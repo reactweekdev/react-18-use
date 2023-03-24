@@ -45,7 +45,7 @@ class SpeakerService {
                 }
             }
 
-            return speakers
+            return speakers.filter((speaker) => Object.keys(speaker).length);
         } catch (error) {
             throw error
         }

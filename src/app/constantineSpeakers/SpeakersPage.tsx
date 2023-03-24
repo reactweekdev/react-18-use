@@ -1,19 +1,19 @@
-import { use } from 'react';
+import { use } from 'react'
 
-import { speakerService } from '@/lib/services/speakerService';
-import Title from '@/components/Title';
+import { userService } from '@/lib/services/userService'
+import Title from '@/components/Title'
 
-import SpeakersList from './SpeakersList';
+import UsersList from './SpeakersList'
 
 function SpeakersPage() {
-	const speakers = use(speakerService.fetchSpeakers());
+    const speakers = use(userService.fetchUsers())
 
-	return (
-		<>
-			<Title>React Speakers</Title>
-			<SpeakersList speakers={speakers} />
-		</>
-	);
+    return (
+        <>
+            <Title>React Speakers</Title>
+            <UsersList speakers={speakers} />
+        </>
+    )
 }
 
-export default SpeakersPage;
+export default SpeakersPage
