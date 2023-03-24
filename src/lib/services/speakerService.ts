@@ -45,7 +45,7 @@ class SpeakerService {
                 }
             }
 
-            return speakers
+            return speakers.filter((spk) => !!spk)
         } catch (error) {
             throw error
         }

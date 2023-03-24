@@ -7,7 +7,8 @@ class UserService {
         singleUser: (id: number) => `/users/${id}`,
     }
 
-    private mapUsers = (usersArr: any[]) => usersArr.map((user: any) => new User(user))
+    private mapUsers = (usersArr: any[]) =>
+        usersArr.map((user: any) => new User(user))
     private mapUser = (userData: any) => new User(userData)
 
     async fetchUsers() {

@@ -1,23 +1,16 @@
-import { Suspense } from 'react'
-
-import reactLogo from '../assets/react.svg'
-
-import UsersPage from './users/UsersPage'
+import React from 'react'
 import './App.css'
+import logo from '../assets/react.svg'
+import { AppRoutes } from './AppRoutes'
 
 function App() {
-
     return (
         <div className="App">
             <div>
-                <img src={reactLogo} className="logo react" alt="React logo" />
+                <img src={logo} className="logo react" alt="React logo" />
             </div>
-            <Suspense fallback={<h2>Loading…</h2>}>
-                <UsersPage />
-            </Suspense>
-            <p className="read-the-docs">
-                React 18 use() hook showcase
-            </p>
+            <AppRoutes />
+            <p className="read-the-docs">React 18 use() hook showcase</p>
         </div>
     )
 }

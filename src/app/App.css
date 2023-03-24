@@ -39,3 +39,15 @@
 .read-the-docs {
   color: #888;
 }
+
+.nav{
+
+  padding:20px;
+}
+.navItem{
+
+  margin:10px;
+  background-color: #444444; 
+  border-radius: 10px;
+  padding:12px;
+}
