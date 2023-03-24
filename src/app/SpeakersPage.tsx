@@ -6,7 +6,6 @@ import { speakerService, Speaker } from '@/lib/services/speakerService'
 export function SpeakersPage() {
     const speakers = use(speakerService.fetchSpeakers())
 
-    console.log(speakers)
     return (
         <>
             <Title>Speakers</Title>
