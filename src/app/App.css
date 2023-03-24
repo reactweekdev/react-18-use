@@ -39,3 +39,19 @@
 .read-the-docs {
   color: #888;
 }
+
+.menu {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.menu-item {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-item:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.6);
+}

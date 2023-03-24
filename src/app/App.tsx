@@ -1,25 +1,57 @@
-import { Suspense } from 'react'
+import { Suspense } from "react";
 
-import reactLogo from '../assets/react.svg'
+import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
 
-import UsersPage from './users/UsersPage'
-import './App.css'
+import "./App.css";
+import SpeakersPage from "./speakers/SpeakersPage";
+import Root from "./routes/root";
+import { ClipLoader } from "react-spinners";
+import UsersPage from "./users/UsersPage";
+
+const Loader = () => {
+  return (
+    <ClipLoader
+      color={"#ffffff"}
+      loading={true}
+      // cssOverride={override}
+      size={150}
+      aria-label="Loading Spinner"
+      data-testid="loader"
+    />
+  );
+};
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      {
+        path: "/",
+        element: (
+          <Suspense fallback={<h2>Loading…</h2>}>
+            <UsersPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/constantine/speakers",
+        element: (
+          <Suspense fallback={<Loader />}>
+            <SpeakersPage />
+          </Suspense>
+        ),
+      },
+    ],
+  },
+]);
 
 function App() {
-
-    return (
-        <div className="App">
-            <div>
-                <img src={reactLogo} className="logo react" alt="React logo" />
-            </div>
-            <Suspense fallback={<h2>Loading…</h2>}>
-                <UsersPage />
-            </Suspense>
-            <p className="read-the-docs">
-                React 18 use() hook showcase
-            </p>
-        </div>
-    )
+  return (
+    <div className="App">
+      <RouterProvider router={router} />
+    </div>
+  );
 }
 
-export default App
+export default App;
