@@ -10,6 +10,8 @@ specifiers:
   cheerio: 1.0.0-rc.12
   react: experimental
   react-dom: experimental
+  react-loader-spinner: ^5.3.4
+  react-router-dom: ^6.9.0
   rect-use: ^1.0.0
   typescript: ^4.9.3
   vite: ^3.2.5
@@ -20,6 +22,8 @@ dependencies:
   cheerio: 1.0.0-rc.12
   react: 0.0.0-experimental-9c54b29b4-20230322
   react-dom: 0.0.0-experimental-9c54b29b4-20230322_ed6xpwya6oca3tppk6uilvo2my
+  react-loader-spinner: 5.3.4_tah32hmxhmi2g7goovfvj5m5ou
+  react-router-dom: 6.9.0_tah32hmxhmi2g7goovfvj5m5ou
   rect-use: 1.0.0_tah32hmxhmi2g7goovfvj5m5ou
 
 devDependencies:
@@ -464,6 +468,11 @@ packages:
       tslib: 1.14.1
     dev: false
 
+  /@remix-run/router/1.4.0:
+    resolution: {integrity: sha512-BJ9SxXux8zAg991UmT8slpwpsd31K1dHHbD3Ba4VzD+liLQ4WAMSxQp2d2ZPRPfN0jN2NPRowcSSoM7lCaF08Q==}
+    engines: {node: '>=14'}
+    dev: false
+
   /@tanstack/query-core/4.27.0:
     resolution: {integrity: sha512-sm+QncWaPmM73IPwFlmWSKPqjdTXZeFf/7aEmWh00z7yl2FjqophPt0dE1EHW9P1giMC5rMviv7OUbSDmWzXXA==}
     dev: false
@@ -587,7 +596,7 @@ packages:
       babel-plugin-syntax-jsx: 6.18.0
       lodash: 4.17.21
       picomatch: 2.3.1
-      styled-components: 5.3.9_tah32hmxhmi2g7goovfvj5m5ou
+      styled-components: 5.3.9_yq6yrxxdqxx5g35vt2chfkqpai
     dev: false
 
   /babel-plugin-syntax-jsx/6.18.0:
@@ -1291,10 +1300,50 @@ packages:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
 
+  /react-is/18.2.0:
+    resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
+    dev: false
+
+  /react-loader-spinner/5.3.4_tah32hmxhmi2g7goovfvj5m5ou:
+    resolution: {integrity: sha512-G2vw4ssX+RDZ/vfaeva06yfNqyFViv/u+tVZ3kFLy5TKNlNx2DbuwreBSpRtPespQA+VxinxUJsigwLwG9erOg==}
+    peerDependencies:
+      react: ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 0.0.0-experimental-9c54b29b4-20230322
+      react-dom: 0.0.0-experimental-9c54b29b4-20230322_ed6xpwya6oca3tppk6uilvo2my
+      react-is: 18.2.0
+      styled-components: 5.3.9_yq6yrxxdqxx5g35vt2chfkqpai
+      styled-tools: 1.7.2
+    dev: false
+
   /react-refresh/0.14.0:
     resolution: {integrity: sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /react-router-dom/6.9.0_tah32hmxhmi2g7goovfvj5m5ou:
+    resolution: {integrity: sha512-/seUAPY01VAuwkGyVBPCn1OXfVbaWGGu4QN9uj0kCPcTyNYgL1ldZpxZUpRU7BLheKQI4Twtl/OW2nHRF1u26Q==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.4.0
+      react: 0.0.0-experimental-9c54b29b4-20230322
+      react-dom: 0.0.0-experimental-9c54b29b4-20230322_ed6xpwya6oca3tppk6uilvo2my
+      react-router: 6.9.0_ed6xpwya6oca3tppk6uilvo2my
+    dev: false
+
+  /react-router/6.9.0_ed6xpwya6oca3tppk6uilvo2my:
+    resolution: {integrity: sha512-51lKevGNUHrt6kLuX3e/ihrXoXCa9ixY/nVWRLlob4r/l0f45x3SzBvYJe3ctleLUQQ5fVa4RGgJOTH7D9Umhw==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.4.0
+      react: 0.0.0-experimental-9c54b29b4-20230322
+    dev: false
 
   /react/0.0.0-experimental-9c54b29b4-20230322:
     resolution: {integrity: sha512-aFi5dUOoDIxM1zVPbrwcltNii/ZEBJGj1ODqmq+RIPScX/Q7fpHnBHHoomJIfBxx9bhK13ygr1bDWmj0Q13V0Q==}
@@ -1397,6 +1446,33 @@ packages:
       react-dom: 0.0.0-experimental-9c54b29b4-20230322_ed6xpwya6oca3tppk6uilvo2my
       shallowequal: 1.1.0
       supports-color: 5.5.0
+    dev: false
+
+  /styled-components/5.3.9_yq6yrxxdqxx5g35vt2chfkqpai:
+    resolution: {integrity: sha512-Aj3kb13B75DQBo2oRwRa/APdB5rSmwUfN5exyarpX+x/tlM/rwZA2vVk2vQgVSP6WKaZJHWwiFrzgHt+CLtB4A==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>= 16.8.0'
+      react-dom: '>= 16.8.0'
+      react-is: '>= 16.8.0'
+    dependencies:
+      '@babel/helper-module-imports': 7.18.6
+      '@babel/traverse': 7.21.3_supports-color@5.5.0
+      '@emotion/is-prop-valid': 1.2.0
+      '@emotion/stylis': 0.8.5
+      '@emotion/unitless': 0.7.5
+      babel-plugin-styled-components: 2.0.7_styled-components@5.3.9
+      css-to-react-native: 3.2.0
+      hoist-non-react-statics: 3.3.2
+      react: 0.0.0-experimental-9c54b29b4-20230322
+      react-dom: 0.0.0-experimental-9c54b29b4-20230322_ed6xpwya6oca3tppk6uilvo2my
+      react-is: 18.2.0
+      shallowequal: 1.1.0
+      supports-color: 5.5.0
+    dev: false
+
+  /styled-tools/1.7.2:
+    resolution: {integrity: sha512-IjLxzM20RMwAsx8M1QoRlCG/Kmq8lKzCGyospjtSXt/BTIIcvgTonaxQAsKnBrsZNwhpHzO9ADx5te0h76ILVg==}
     dev: false
 
   /stylefire/7.0.3:
