@@ -6,7 +6,6 @@ import { Speaker, speakerService } from "../../lib/services/speakerService";
 
 function SpeakersPage() {
   const speakers = use(speakerService.fetchSpeakers());
-  console.log({ speakers });
 
   return (
     <>
