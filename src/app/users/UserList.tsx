@@ -6,8 +6,8 @@ type Props = {
 
 const UsersList = ({ users }: Props) => (
     <section>
-        {users.map((user: any) => (
-            <p>{user.name}</p>
+        {users.map((user) => (
+            <p key={user.id}>{user.name}</p>
         ))}
     </section>
 )
