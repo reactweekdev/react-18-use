@@ -7,7 +7,7 @@
         "dev": "vite",
         "build": "tsc && vite build",
         "preview": "vite preview",
-        "reset": "rm -rf node_modules && pnpm install"
+        "reset": "rm -rf node_modules && npm install"
     },
     "dependencies": {
         "@tanstack/react-query": "^4.19.1",
