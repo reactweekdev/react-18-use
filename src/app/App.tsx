@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 
 import reactLogo from '../assets/react.svg'
 
-import UsersPage from './users/UsersPage'
+import UsersPage from './pages/UsersPage'
 import './App.css'
 
 function App() {
