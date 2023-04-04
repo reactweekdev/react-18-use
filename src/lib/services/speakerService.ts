@@ -10,7 +10,7 @@ export type Speaker = {
 };
 
 class SpeakerService {
-  async fetchSpeakers(): Promise<{}[]> {
+  async fetchSpeakers(): Promise<Speaker[]> {
     try {
       // Go to the dev.to tags page
       const response = await axios.get(CODESTANTINE_URL);
@@ -19,8 +19,6 @@ class SpeakerService {
       const html = await response.data;
       const $ = load(html);
 
-      // const speakers: Speaker[] = []
-
       // Find all elements with crayons-tag class, find their innerText and add them to the tags array
       const speakersTopicsArr = $('h3.elementor-heading-title')
         .map(function () {
@@ -28,7 +26,7 @@ class SpeakerService {
         })
         .get();
 
-      const speakers: any[] = [];
+      const speakers: Speaker[] = [];
       for (let index = 0; index < speakersTopicsArr.length; index++) {
         const elem = speakersTopicsArr[index];
 
@@ -45,7 +43,7 @@ class SpeakerService {
         }
       }
 
-      return speakers;
+      return speakers.filter((speaker) => !!speaker);
     } catch (error) {
       throw error;
     }
