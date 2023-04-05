@@ -1,25 +1,17 @@
-import { Suspense } from 'react'
+import reactLogo from '@/assets/react.svg';
 
-import reactLogo from '../assets/react.svg'
+import Router from '@/app/router/Router';
 
-import UsersPage from './users/UsersPage'
-import './App.css'
+import './App.css';
 
-function App() {
+const App = () => (
+  <div className="App">
+    <div>
+      <img src={reactLogo} className="logo react" alt="React logo" />
+    </div>
+    <Router />
+    <p className="read-the-docs">React 18 use() hook showcase</p>
+  </div>
+);
 
-    return (
-        <div className="App">
-            <div>
-                <img src={reactLogo} className="logo react" alt="React logo" />
-            </div>
-            <Suspense fallback={<h2>Loading…</h2>}>
-                <UsersPage />
-            </Suspense>
-            <p className="read-the-docs">
-                React 18 use() hook showcase
-            </p>
-        </div>
-    )
-}
-
-export default App
+export default App;
