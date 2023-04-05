@@ -1,0 +1,9 @@
+.navItem {
+  margin: 10px;
+  padding: 12px;
+  color: #213547;
+}
+
+.active {
+  color: #61dafb;
+}
