@@ -1,19 +1,19 @@
-import { use } from 'react'
+import { use } from 'react';
 
-import { userService } from '@/lib/services/userService'
-import Title from '@/components/Title'
+import { fetchUsers } from '@/lib/services/fetchUsers';
+import Title from '@/components/Title';
 
-import UsersList from '../users/UserList'
+import UsersList from '../users/UserList';
 
 function UsersPage() {
-    const users = use(userService.fetchUsers())
+  const users = use(fetchUsers());
 
-    return (
-        <>
-            <Title>React Users</Title>
-            <UsersList users={users} />
-        </>
-    )
+  return (
+    <>
+      <Title>React Users</Title>
+      <UsersList users={users} />
+    </>
+  );
 }
 
-export default UsersPage
+export default UsersPage;
