@@ -1,7 +1,8 @@
 import { use } from 'react';
 
-import { fetchSpeakers } from '@/lib/services/fetchSpeaker';
+import { fetchSpeakers } from '@/lib/services/fetchSpeakers';
 
+import SpeakersList from '@/app/speakers/SpeakersList';
 import Title from '@/components/Title';
 
 function SpeakersPage() {
@@ -10,7 +11,7 @@ function SpeakersPage() {
   return (
     <>
       <Title>Speakers</Title>
-      SpeakersList
+      <SpeakersList speakers={speakers}/>
     </>
   );
 }
