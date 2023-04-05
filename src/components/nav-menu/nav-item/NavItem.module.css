@@ -7,3 +7,11 @@
 .active {
   color: #61dafb;
 }
+
+a:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+a.ni:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}

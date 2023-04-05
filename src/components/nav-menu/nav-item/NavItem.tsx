@@ -11,8 +11,8 @@ const NavItem = ({ to, text }: { to: string; text: string }) => {
     isActive ? ' ' + styles.active + ' ' : ' ';
 
   return (
-    <div data-active={!!match} className={styles.navItem + ' ' + styles.ni}>
-      <NavLink to={to} className={activeLink}>
+    <div data-active={!!match} className={styles.navItem}>
+      <NavLink to={to} className={activeLink + ' ' + styles.ni}>
         {text}
       </NavLink>
     </div>
