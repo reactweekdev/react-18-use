@@ -1,13 +1,14 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import NavMenu from '@/components/NavMenu';
+import DotSpinner from '@/components/spinner/DotSpinner';
+import NavMenu from '@/components/nav-menu/NavMenu';
 
-function Root() {
+export default function Root() {
   return (
     <>
       <NavMenu />
-      <Suspense fallback={<h2>Loading…Foreboding!!!</h2>}>
+      <Suspense fallback={<DotSpinner />}>
         <Outlet />
       </Suspense>
     </>
